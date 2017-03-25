@@ -12,7 +12,7 @@ https://github.com/sonm-io/token
 4. Hub wallet factory
 5. Hub wallet
 6. RegApp (Simple React/Webpack App to work with hub registrations)
-7. PayOut App (already implemanted for DD@H project)
+7. PayOut App (already implemented for DD@H project)
 https://github.com/sonm-io/drugdiscovery-token
 
 
