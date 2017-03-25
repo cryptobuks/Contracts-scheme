@@ -1,6 +1,6 @@
 # Contracts-scheme
 Scheme of smart-contracts organization
-
+![Image alt](https://github.com/sonm-io/Contracts-scheme/raw/master/images/ContrScheme.jpg)
 
 
 Structure of contracts:
