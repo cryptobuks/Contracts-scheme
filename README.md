@@ -3,7 +3,7 @@ Scheme of smart-contracts organization
 ![Image alt](https://github.com/sonm-io/Contracts-scheme/raw/master/images/ContrScheme.jpg)
 
 
-Structure of contracts:
+### Structure of contracts:
 
 1. Migrations(Standard)
 2. Sonm Token
@@ -16,32 +16,31 @@ https://github.com/sonm-io/token
 https://github.com/sonm-io/drugdiscovery-token
 
 
-Abstract:
+### Abstract:
 
-It is schematic of smart-contracts system which will be implemented in SONM network. More info about network and contracts interaction you could find in whitepaper - [http://sonm.io/Sonm1.pdf](http://sonm.io/Sonm1.pdf)
+Outline of the smart-contracts system which will be implemented in SONM network is presented. More info about network and contracts interaction can be found in the [whitepaper](http://sonm.io/Sonm1.pdf)
 
 
+### Simple Data flow
 
-Simple Data flow:
+#### HUB
 
-HUB
+Before hub started to payout tokens to miners and recive payments from buyers, he must create a hub wallet — simple contract with fixed amount of frozen funds. If hub is caught on cheating, DAO can initiate process of blacklisting this hub and expropriate its frozen funds.
 
-Before hub started to payout tokens to miners and recive payments from buyers – he must create a hub wallet – simple contract with defined amount of frozen funds. If hub will be cheating – DAO could initiate process of blacklisting this hub and expropriate frozen funds from it.
+Those expropriated funds will also be frozen at the DAO account for some specified time. This is to protect against malicious descisions of the DAO: tokens can drop in price during freeze, therefore there is no motivation to 'raskulachivat' (expropriate) every hub.
 
-Frozen funds it also will be frozen at DAO account for defined time – it&#39;s special protection against malicious descisions of DAO – tokens could lower it price for time from expropriation to undfreeze, therefore there is no motivation to &#39;raskulachivat&#39;(expropriate) every hub.
+#### HUB FACTORY
 
-HUB FACTORY
+*Hub wallet* can be created only by *Hub wallet factory* (which is actually simplified replication factory), which create new hub wallet contract and register it in 'whitelist' contract.
 
-This hub wallets could be created only throught Hub wallet factory (which is actually simplified replication factory), which create new hub wallet contract and register it in &#39;whitelist&#39; contract.
+#### WHITELIST
 
-WHITELIST
+*Whitelist contract* is a registry contract containing info about hubs and their statuses. All hub wallet created by hub wallet factory are registered in this contract. It supposed to be simple registry with a special mapping for 'trusted' hubs. Initially, 'trusted' hubs will be checked by SONM developers manually / be official SONM hubs. Later, it supposed to be also a rating list — everyone could check hub and rate it (betting some amount of SONM tokens to prevent rating fraud).
 
-Whitelist contract – it is simple registry contract which contain info about hubs and it&#39;s status. All hub wallet created throught hub wallet factory is registrates in this contract. It suppose to be simple registry + special mapping for &#39;trusted&#39; hubs. For the first time &#39;trusted&#39; hub&#39;s will be only hub&#39;s which will be checked by SONM developers manually / be official SONM hubs. In the future it suppose to be also a rating list – everyone could check hub and rate it, betting some amount of sonm tokens (to prevent rating fraud).
+#### REGAPP
 
-REGAPP
+React.js application which is simple web application (web-page) with the purpose of user friendly hub registration process.
 
-Simple React.js application which is simple web application (web-page) with purpose to simplified hub registration process.
+#### PAYOUT APP
 
-PAYOUT APP
-
-Simple application to proceed miners token payout mechanism. For now it is implemented to work with BOINC statistic mechanism.
+Application to proceed miners token payout mechanism. For now it is implemented to work with BOINC statistic mechanism.
