@@ -8,7 +8,7 @@ Scheme of smart-contracts organization
 1. Migrations(Standard)
 2. [Sonm Token](https://github.com/sonm-io/token)
 3. DAO(Standard)
-4. [Hub wallet factory] (https://github.com/sonm-io/Forge/blob/master/contracts/Hubs/HubFactory.sol)
+4. [Hub wallet factory](https://github.com/sonm-io/Forge/blob/master/contracts/Hubs/HubFactory.sol)
 5. [Hub wallet](https://github.com/sonm-io/Smart-dummy/tree/master/contracts/Hubs)
 6. [Whitelist prototype](https://github.com/sonm-io/Forge/tree/master/contracts/Whitelist)
 7. RegApp (Simple React/Webpack App to work with hub registrations)
