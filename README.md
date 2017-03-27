@@ -6,13 +6,13 @@ Scheme of smart-contracts organization
 ### Structure of contracts:
 
 1. Migrations(Standard)
-2. Sonm Token
-https://github.com/sonm-io/token
+2. [Sonm Token](https://github.com/sonm-io/token)
 3. DAO(Standard)
-4. Hub wallet factory
+4. [Hub wallet factory] (https://github.com/sonm-io/Forge/blob/master/contracts/Hubs/HubFactory.sol)
 5. [Hub wallet](https://github.com/sonm-io/Smart-dummy/tree/master/contracts/Hubs)
-6. RegApp (Simple React/Webpack App to work with hub registrations)
-7. PayOut App (already implemented for DD@H project)
+6. [Whitelist prototype](https://github.com/sonm-io/Forge/tree/master/contracts/Whitelist)
+7. RegApp (Simple React/Webpack App to work with hub registrations)
+8. PayOut App (already implemented for DD@H project)
 https://github.com/sonm-io/drugdiscovery-token
 
 
